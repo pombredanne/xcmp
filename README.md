@@ -5,7 +5,7 @@ xcmp（Xcompression）はmksquashfsとsasquatchを使用したファイル圧縮
 ## 使い方
 圧縮：xcmp_cmp.sh
 
-解凍：xcmp_setup.sh
+解凍：xcmp_uncmp.sh
 
 で行います。ファイル名を入力する際は場所も含めて記述してください。
 
