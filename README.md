@@ -1,3 +1,8 @@
 # xcmp
 xcmp（Xcompression）はmksquashfsとsasquatchを使用したファイル圧縮、解凍スクリプトです。高い圧縮率を実現しました。
 セットアップに必要なファイルおよび、セットアップを行うスクリプト https://github.com/nexryai/sasquatch 
+## 使い方
+圧縮：xcmp_cmp.sh
+解凍：xcmp_setup.sh
+で行います。ファイル名を入力する際は場所も含めて記述してください。
+例 /user/Desktop/file
