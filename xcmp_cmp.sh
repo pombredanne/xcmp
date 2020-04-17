@@ -1,9 +1,10 @@
 #!/bin/bash
-echo '========================'
-echo 'xcmp compression v.0.1.2'
-echo '========================'
-echo -n 圧縮するファイル: 
-read cmp_file
-echo -n ファイル名: 
-read filename
-mksquashfs $cmp_file ${filename}.xcmp
+
+cmp_file=$(zenity --file-selection --directory --title "圧縮するディレクトリを選んで下さい")
+filedir=$(zenity --file-selection --directory --title "圧縮後ファイルを置くディレクトリを選んで下さい")
+filename=$(zenity --entry --title "xcmp" --text "圧縮後のファイル名")
+zenity --info --title "準備完了" --text "処理が完了したら通知します。okで続行します。"
+zenity --progress --text "お待ちください..." --pulsate & mksquashfs $cmp_file ${filedir}/${filename}.xcmp  
+zenity --notification --text "処理が終わりました。"
+zenity --info --title "done" --text "処理が完了しました"
+exit 
