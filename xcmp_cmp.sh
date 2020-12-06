@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e
 
 cmp_file=$(zenity --file-selection --directory --title "圧縮するディレクトリを選んで下さい")
 filedir=$(zenity --file-selection --directory --title "圧縮後ファイルを置くディレクトリを選んで下さい")
