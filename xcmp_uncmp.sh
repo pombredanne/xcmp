@@ -1,4 +1,7 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+set -e
+
 unzip_file=$(zenity --file-selection --text "解凍するファイルを選んで下さい。")
 unzip_dir=$(zenity --file-selection --directory --title "解凍したファイルを置くディレクトリを選んで下さい")
 cd $unzip_dir
